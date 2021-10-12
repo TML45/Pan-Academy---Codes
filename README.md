@@ -1,5 +1,5 @@
 # Pan_Academy_Codes
 
 - Name: Tássio Melo Linhares
-- Favourite dish: A lot
+- Favourite dish: Many
  
