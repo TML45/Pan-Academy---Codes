@@ -1,25 +1,27 @@
 import java.util.Scanner;
 
 public class Exercicio1 {
-	Scanner entrada = new Scanner(System.in);
-	int quantidadeNotas = 0;
-	double nota = 0.0;
-	double total;
-	
-	while(nota != -1) {
-		System.out.println("Digite a proxima nota: ");
-		nota = entrada.nextDouble();
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
+		Scanner entrada = new Scanner(System.in);
+		int quantidadeNotas = 0;
+		double nota = 0;
+		double total = 0;
 		
-		if(nota >= 0 && nota<= 10) {
-			quantidadeNotas += 1;
-			total += nota;
-		}else if(nota == -1) {
-			double media = total / quantidades;
-			System.out.println("Quantidades de notas totais");
+		while(nota != -1) {
+			System.out.println("Digite a proxima nota: ");
+			nota = entrada.nextDouble();
 			
-		}else {
-			System.out.println("Nota inválida");
-		}
+			if(nota >= 0 && nota<= 10) {
+				quantidadeNotas += 1;
+				total += nota;
+			}else if(nota == -1) {
+				double media = total / (double)quantidadeNotas;
+				System.out.println("Quantidades de notas totais "+ quantidadeNotas);
+				System.out.printf("%.2f é a media das notas.", media);
+				
+			}else {
+				System.out.println("Nota inválida");}
 	}
-
+}
 }
