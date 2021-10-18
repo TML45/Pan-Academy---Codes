@@ -9,10 +9,6 @@ public abstract class Profissional {
 	public Profissional() {
 	}
 	
-	public double bonusSalario() {
-		return this.salario * 0.25;
-	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -37,6 +33,11 @@ public abstract class Profissional {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
+	public double bonusSalario() {
+		return this.salario * 0.25;
+	}
+
 
 //	@Override
 //	public String toString() {

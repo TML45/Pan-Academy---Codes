@@ -1,14 +1,11 @@
-package heranca_new;
+package animais;
 
-public class TesteProfissional {
-	
+public class TesteAnimal {
 	
 	public static void main(String[] args) {
-		Professor p1 = new Professor();
-		p1.setMateria("POO");
-		p1.setSalario(1000);
-		p1.setNome("Jenifer");
-		p1.bonusSalario();
+		Mamifero cachorro = new Mamifero();
+		cachorro.setComunicar("Latir");
+		cachorro.setMovimentar("Caminhar");
 		
 //		System.out.println(p1.toString());
 //		System.out.println(p1.bonusSalario());
@@ -18,12 +15,7 @@ public class TesteProfissional {
 //		ptg.setSalario(1000);
 //		System.out.println(ptg.bonusSalario());
 		
-		System.out.println(p1.bonusSalario());
-		
-		
-		
+		System.out.println(cachorro.getComunicar());	
 	}
-	
-	
 
 }
