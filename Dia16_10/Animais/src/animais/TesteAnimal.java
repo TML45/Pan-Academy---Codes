@@ -6,10 +6,12 @@ public class TesteAnimal {
 		Mamifero cachorro = new Mamifero();
 		cachorro.setComunicar("Latir");
 		cachorro.setMovimentar("Caminhar");
+		cachorro.setHabitat("Terreste");
 		
 		Ave curio = new Ave();
 		curio.setComunicar("cantar");
 		curio.setMovimentar("voar");
+		curio.setSongQuality("really good");
 		
 //		System.out.println(p1.toString());
 //		System.out.println(p1.bonusSalario());
@@ -21,8 +23,10 @@ public class TesteAnimal {
 		
 		System.out.println(cachorro.getComunicar());
 		System.out.println(cachorro.getMovimentar());
+		System.out.println(cachorro.getHabitat());
 		System.out.println(curio.getComunicar());
-		System.out.println(curio.getMovimentar());		
+		System.out.println(curio.getMovimentar());
+		System.out.println(curio.getSongQuality());
 	}
 
 }
