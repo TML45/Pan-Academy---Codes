@@ -16,12 +16,7 @@ public class Aluno {
 		}
 	}
 	
-	public void setAprovado(double[] notas) {
-		double soma = 0;
-		double media;
-		for (double i : notas) {
-			soma += i;}
-		media = soma /notas.length;
+	public void setAprovado(double media) {
 		this.media = media;
 	}
 	
@@ -37,6 +32,13 @@ public class Aluno {
 			}
 		this.maiorNota = maior;
 		}
+	}
+	
+	public double getMedia() {
+		return media;
+	}
+	public void setMedia(double media) {
+		this.media = media;		
 	}
 
 }
