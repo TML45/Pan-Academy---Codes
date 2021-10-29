@@ -22,8 +22,8 @@ public class ApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Usuario u1 = new Usuario(1,"Maria Silva", "1234");
-		Usuario u2 = new Usuario(2,"Joao da Silva", "1234");
+		Usuario u1 = new Usuario("Maria Silva", "1234");
+		Usuario u2 = new Usuario("Joao da Silva", "1234");
 		usuarioRepository.saveAll(Arrays.asList(u1, u2));
 
 		// usuarioRepository.save(u1);

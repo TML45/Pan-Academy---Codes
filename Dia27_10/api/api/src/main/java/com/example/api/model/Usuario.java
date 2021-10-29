@@ -34,11 +34,10 @@ public class Usuario implements Serializable{
 	}
 
 
-	public Usuario(Integer id,
+	public Usuario(
 			@NotEmpty @Length(min = 3, max = 100, message = "Valor entre 3 e 100 caracteres") String nome,
 			@NotEmpty @Length(min = 3, max = 100) String senha) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
 	}
