@@ -1,5 +1,6 @@
-# Pan_Academy_Codes
+# Repositório Gama - Pan Academy
 
-- Name: Tássio Melo Linhares
-- Favourite dish: Many
- 
+Esse repositório contêm as atividades desenvolvidas durante o treinamento realizado pela Gama Academy no curso de Java e AWS promovido pelo Banco Pan.
+
+As atividades realizadas são:
+
