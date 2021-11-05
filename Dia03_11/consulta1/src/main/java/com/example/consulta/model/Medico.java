@@ -1,4 +1,4 @@
-package model;
+package com.example.consulta.model;
 
 import java.io.Serializable;
 import java.util.Objects;

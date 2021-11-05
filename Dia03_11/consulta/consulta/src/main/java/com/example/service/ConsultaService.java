@@ -1,15 +1,16 @@
-package service;
+package com.example.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import model.Consulta;
-import repository.ConsultaRepository;
+import com.example.model.Consulta;
+import com.example.repository.ConsultaRepository;
 
+@Service
 public class ConsultaService {
-
 	@Autowired
 	private ConsultaRepository repository;
 

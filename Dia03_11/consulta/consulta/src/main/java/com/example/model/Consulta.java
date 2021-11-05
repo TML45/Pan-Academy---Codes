@@ -1,4 +1,4 @@
-package model;
+package com.example.model;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -7,9 +7,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
 @Document() // registro de um colecao
 public class Consulta implements Serializable{
-	private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
 	
 	@Id
 	private String id;
@@ -98,7 +99,5 @@ public class Consulta implements Serializable{
 		Consulta other = (Consulta) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
 }

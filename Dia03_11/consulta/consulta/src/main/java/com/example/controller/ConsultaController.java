@@ -1,4 +1,4 @@
-package controller;
+package com.example.controller;
 
 import java.util.List;
 
@@ -11,31 +11,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import model.Consulta;
-import service.ConsultaService;
+import com.example.model.Consulta;
+import com.example.service.ConsultaService;
+
 
 @RestController
 @RequestMapping(path = "/consulta")
 public class ConsultaController {
-	
-		
-		@Autowired
-		private ConsultaService consultaService;
+	@Autowired
+	private ConsultaService consultaService;
 
-		@GetMapping
-		public List<Consulta> findAll() {
-			return this.consultaService.findAll();
+	@GetMapping
+	public List<Consulta> findAll() {
+		return this.consultaService.findAll();
+}
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Consulta> findById(@PathVariable String id) {
+		Consulta obj = this.consultaService.findById(id);
+		return ResponseEntity.ok().body(obj);
 	}
-
-		@GetMapping(value = "/{id}")
-		public ResponseEntity<Consulta> findById(@PathVariable String id) {
-			Consulta obj = this.consultaService.findById(id);
-			return ResponseEntity.ok().body(obj);
-		}
-		
-		@PostMapping
-		public Consulta criar(@RequestBody Consulta consulta) {
-			return this.consultaService.create(consulta);
-		}
+	
+	@PostMapping
+	public Consulta criar(@RequestBody Consulta consulta) {
+		return this.consultaService.create(consulta);
+	}
 
 }
