@@ -28,5 +28,15 @@ public class ConsultaService {
 		obj.setId(null);
 		return repository.save(obj);
 	}
+	
+	public Consulta update(String id, Consulta obj) {
+		Consulta newObj = findById(id);
+		newObj.setMedico(obj.getMedico());
+		newObj.setPrescricoes(obj.getPrescricoes());
+		newObj.setExames(obj.getExames());
+		newObj.setProntuario(obj.getProntuario());
+		newObj.setData(obj.getData());
+		return repository.save(newObj);
+	}
 
 }

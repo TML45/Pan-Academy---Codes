@@ -28,5 +28,11 @@ public class MedicoService {
 		obj.setId(null);
 		return repository.save(obj);
 	}
+	
+	public Medico update(String id, Medico obj) {
+		Medico newObj = findById(id);
+		newObj.setNome(obj.getNome());
+		return repository.save(newObj);
+	}
 
 }

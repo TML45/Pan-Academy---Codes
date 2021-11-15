@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 
 import com.example.consulta.model.Medico;
@@ -28,6 +27,15 @@ public class MedicoService {
 	public Medico create(Medico obj) {
 		obj.setId(null);
 		return repository.save(obj);
+	}
+	
+	public Medico update(String id, Medico obj) {
+		Medico newObj = findById(id);
+		newObj.setNome(obj.getNome());
+		newObj.setDocumento(obj.getDocumento());
+		newObj.setEspecialidade(obj.getEspecialidade());
+		newObj.setTelefone(obj.getTelefone());
+		return repository.save(newObj);
 	}
 
 }
